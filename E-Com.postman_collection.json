@@ -1,0 +1,357 @@
+{
+	"info": {
+		"_postman_id": "2b21c28b-fdc4-43e2-a541-228bd018735c",
+		"name": "E-Com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24975470"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Pritam Saha\",\r\n    \"email\":\"pritam123@gmail.com\",\r\n    \"password\":\"Pritam123\",\r\n    \"address\":\"Kolkata\",\r\n    \"role\":\"USER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8888/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SignIn",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Pritam123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "pritam123@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/signIn",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"signIn"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "FindAllProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJQcml0YW0iLCJzdWIiOiJUb2tlbiIsInVzZXJuYW1lIjoicHJpdGFtMTIzQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjoiIiwiaWF0IjoxNzEwOTEzMTI2LCJleHAiOjE3MTA5NDMxMjZ9.iN-DF0rn4BA_aGzlIBXEM_OQYPrUiCrhQK3TU4Uo4ic",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/product/find-all-product/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"product",
+								"find-all-product",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJQcml0YW0iLCJzdWIiOiJUb2tlbiIsInVzZXJuYW1lIjoicHJpdGFtMTIzQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjoiIiwiaWF0IjoxNzEwOTEzMTI2LCJleHAiOjE3MTA5NDMxMjZ9.iN-DF0rn4BA_aGzlIBXEM_OQYPrUiCrhQK3TU4Uo4ic",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/product/product/1/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"product",
+								"product",
+								"1",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJQcml0YW0iLCJzdWIiOiJUb2tlbiIsInVzZXJuYW1lIjoicHJpdGFtMTIzQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjoiIiwiaWF0IjoxNzEwOTEzMTI2LCJleHAiOjE3MTA5NDMxMjZ9.iN-DF0rn4BA_aGzlIBXEM_OQYPrUiCrhQK3TU4Uo4ic",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productName\": \"mobile\",\r\n    \"price\": 10000.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8888/product/add-product/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"product",
+								"add-product",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJQcml0YW0iLCJzdWIiOiJUb2tlbiIsInVzZXJuYW1lIjoicHJpdGFtMTIzQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjoiIiwiaWF0IjoxNzEwOTEzMTI2LCJleHAiOjE3MTA5NDMxMjZ9.iN-DF0rn4BA_aGzlIBXEM_OQYPrUiCrhQK3TU4Uo4ic",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productName\": \"mobile\",\r\n    \"price\": 5000.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8888/product/update/1/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"product",
+								"update",
+								"1",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJQcml0YW0iLCJzdWIiOiJUb2tlbiIsInVzZXJuYW1lIjoicHJpdGFtMTIzQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjoiIiwiaWF0IjoxNzEwOTEzMTI2LCJleHAiOjE3MTA5NDMxMjZ9.iN-DF0rn4BA_aGzlIBXEM_OQYPrUiCrhQK3TU4Uo4ic",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/product/delete/1/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"product",
+								"delete",
+								"1",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "AddToCart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJQcml0YW0iLCJzdWIiOiJUb2tlbiIsInVzZXJuYW1lIjoicHJpdGFtMTIzQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjoiIiwiaWF0IjoxNzEwOTEzMTI2LCJleHAiOjE3MTA5NDMxMjZ9.iN-DF0rn4BA_aGzlIBXEM_OQYPrUiCrhQK3TU4Uo4ic",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/cart/add/2/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"cart",
+								"add",
+								"2",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RemoveFromCart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJQcml0YW0iLCJzdWIiOiJUb2tlbiIsInVzZXJuYW1lIjoicHJpdGFtMTIzQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjoiIiwiaWF0IjoxNzEwOTEzMTI2LCJleHAiOjE3MTA5NDMxMjZ9.iN-DF0rn4BA_aGzlIBXEM_OQYPrUiCrhQK3TU4Uo4ic",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/cart/delete/2/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"cart",
+								"delete",
+								"2",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserCart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJQcml0YW0iLCJzdWIiOiJUb2tlbiIsInVzZXJuYW1lIjoicHJpdGFtMTIzQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjoiIiwiaWF0IjoxNzEwOTEzMTI2LCJleHAiOjE3MTA5NDMxMjZ9.iN-DF0rn4BA_aGzlIBXEM_OQYPrUiCrhQK3TU4Uo4ic",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/cart/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"cart",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
