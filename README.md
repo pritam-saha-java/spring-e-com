@@ -49,7 +49,7 @@ This project is a basic eCommerce web application developed using Spring Boot fr
 
 The project exposes RESTful APIs for various functionalities. Detailed API documentation including request/response formats, endpoints, and sample usage can be found in the provided Postman collection.
 
-**Postman Collection:** Given within the repository.
+**Postman Collection:** [Collection Link](https://github.com/pritam-saha-java/spring-e-com/blob/main/E-Com.postman_collection.json)
 
 ## Testing Strategy
 
